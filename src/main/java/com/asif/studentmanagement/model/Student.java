@@ -1,0 +1,3 @@
+package com.asif.studentmanagement.model;
+import jakarta.persistence.*; import jakarta.validation.constraints.*;
+@Entity @Table(name="students") public class Student { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @NotBlank private String name; @NotBlank @Email private String email; @NotBlank private String course; @NotNull private Integer year; public Student(){} public Long getId(){return id;} public String getName(){return name;} public void setName(String v){name=v;} public String getEmail(){return email;} public void setEmail(String v){email=v;} public String getCourse(){return course;} public void setCourse(String v){course=v;} public Integer getYear(){return year;} public void setYear(Integer v){year=v;} }
